@@ -1,0 +1,52 @@
+// At this checkpoint, you are asked to write an algorithm that read a sentence, which ends with a point, character by character, and to determine:
+
+// Instructions:
+// The length of the sentence (the number of characters).
+// The number of words in the sentence (assuming that the words are separated by a single space).
+// The number of vowels in the sentence.
+
+// You have to keep in mind that:
+
+// Each character will be treated separately.
+// The last character is the point.
+// Use three variables as counters.
+
+
+ALGORITHM Sentence_text
+
+VAR
+
+str : Array_of STRING[];
+nb_words, nb_char, nb_vowel, nb_spaces : INTEGER;
+
+sentc : STRING;
+
+{a,e,i,o,u} : vowels : CHAR;
+" ": space
+i : INTEGER
+
+BEGIN
+
+Write(input the sentence)
+Read(str)
+
+//converting all texts to lowercase
+str = str.toLowercase();
+
+// To know number of spaces in the sentence to know number of words
+    FOR i FROM 0 TO str.length STEP 1 DO
+    nb_words := (nb_spaces ++)
+    END_FOR
+
+// To know the number of characters in the sentence
+FOR i FROM 0 TO str.length STEP 1  DO
+    nb_char := (str.length - nb_spaces)
+END_FOR
+
+// To know the number of vowels in the sentence
+FOR i FROM 0 TO str.length STEP 1  DO
+    IF (i="a") || (i="e") || (i="i") || (i="o") || (i="u") || THEN
+    nb_vowel := (nb_vovel ++)
+END_FOR
+
+END
